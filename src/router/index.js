@@ -1,11 +1,17 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
+import AllFineTunesView from "../views/fine-tunes/AllFineTunesView.vue";
 
 const routes = [
   {
     path: "/",
     name: "home",
     component: HomeView,
+  },
+  {
+    path: "/fine-tunes",
+    name: "AllFineTunesView",
+    component: AllFineTunesView,
   },
   {
     path: "/about",

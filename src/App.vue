@@ -1,9 +1,4 @@
 <template>
-  <nav>
-    <LocalLang />
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
   <router-view />
   <!-- set progressbar -->
   <vue-progress-bar></vue-progress-bar>
@@ -45,11 +40,9 @@
 </template>
 
 <script>
-import LocalLang from "@/components/LocalLang.vue";
+// import LocalLang from "@/components/LocalLang.vue";
 export default {
-  components: {
-    LocalLang,
-  },
+  components: {},
   data() {
     return {
       refreshing: false,
@@ -140,18 +133,18 @@ export default {
   color: #2c3e50;
 }
 
-nav {
-  padding: 30px;
-}
+// nav {
+//   padding: 30px;
+// }
 
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
+// nav a {
+//   font-weight: bold;
+//   color: #2c3e50;
+// }
 
-nav a.router-link-exact-active {
-  color: #42b983;
-}
+// nav a.router-link-exact-active {
+//   color: #42b983;
+// }
 
 /* Enter and leave animations can use different */
 /* durations and timing functions.              */

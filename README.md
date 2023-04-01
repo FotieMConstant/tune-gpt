@@ -1,4 +1,4 @@
-# vue3-base
+# tune-gpt
 
 Note: This boilerplate comes with:
 
