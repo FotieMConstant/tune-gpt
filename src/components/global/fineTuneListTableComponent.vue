@@ -68,7 +68,8 @@
             </td>
             <td class="py-3 px-6 text-center">
               <div class="flex item-center justify-center">
-                <div
+                <router-link
+                  :to="`/fine-tunes/` + tuneItem.id"
                   class="w-4 mr-2 transform hover:text-purple-500 hover:scale-110"
                 >
                   <svg
@@ -90,9 +91,10 @@
                       d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
                     />
                   </svg>
-                </div>
+                </router-link>
                 <div
-                  class="w-4 mr-2 transform hover:text-purple-500 hover:scale-110"
+                  @click="handleDeleteFineTunedModel(tuneItem.fine_tuned_model)"
+                  class="w-4 mr-2 transform hover:text-purple-500 hover:scale-110 cursor-pointer"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -136,6 +138,21 @@ export default {
         let response = await this.$store.dispatch("openai/listFineTunes", this);
         this.fineTuneList = response;
         console.log(this.fineTuneList);
+      } catch (error) {
+        console.log(error);
+      }
+    }, // function to call action from store to delete fine-tuned model
+    async handleDeleteFineTunedModel(fine_tuned_model) {
+      console.log("model to delete=> ", fine_tuned_model);
+      try {
+        let response = await this.$store.dispatch(
+          "openai/deleteFineTunedModel",
+          {
+            fine_tuned_model: fine_tuned_model,
+            _vm: this,
+          }
+        );
+        console.log(response);
       } catch (error) {
         console.log(error);
       }

@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import AllFineTunesView from "../views/fine-tunes/AllFineTunesView.vue";
+import FineTuneDetailsView from "../views/fine-tunes/FineTuneDetailsView.vue";
 
 const routes = [
   {
@@ -12,6 +13,11 @@ const routes = [
     path: "/fine-tunes",
     name: "AllFineTunesView",
     component: AllFineTunesView,
+  },
+  {
+    path: "/fine-tunes/:fineTuneId",
+    name: "FineTuneDetailsView",
+    component: FineTuneDetailsView,
   },
   {
     path: "/about",

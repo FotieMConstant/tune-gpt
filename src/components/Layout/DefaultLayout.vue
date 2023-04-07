@@ -38,7 +38,7 @@
                 ></path>
               </svg>
             </button>
-            <a href="#" class="text-xl font-bold flex items-center lg:ml-2.5">
+            <a href="/" class="text-xl font-bold flex items-center lg:ml-2.5">
               <span class="self-center whitespace-nowrap">TuneGPT</span>
             </a>
             <form action="#" method="GET" class="hidden lg:block lg:pl-32">
